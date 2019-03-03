@@ -1,12 +1,9 @@
-What have been done :
-A dockerfile specified a container for client machine.
-- Container would pretend to be a machine with SSH functionality
-- Container can log ssh attempts
-
-The AlphaClient would run on 2 of that container.
+Implemented functionalities :  
+- Creation of three docker container that pretend to work as machine/server, two container would run AlphaClient and one would run AlphaServer.
+- Docker compose that automated the containers creations (but the AlphaServer and AlphaClient still don't have automation yet)
+- AlphaClient : can synchronize ssh log file to server as soon as the ssh login attempt happens
+- AlphaServer : can accept logs from AlphaClients
 
 To do :
-- Create AlphaClient : it would run rsync to sync ssh log file to AlphaServer
-- Create AlphaServer on docker
-- Create docker compose 
-- Create automation script or using Ansible
+- Create AlphaServer simple webview for monitoring
+- ~~Create automation script or using Ansible.~~ Changed the automation with docker-compose instead, and probably a simple script.
