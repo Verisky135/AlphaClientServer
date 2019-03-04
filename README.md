@@ -22,7 +22,7 @@ Usage (run from root directory):
     ```
 - Watching the live report of SSH login attempt. Count both failed and successful attempts.
     ```
-    watch -n 1 tail Server/monitoring.log
+    watch -n 0.3 tail Server/monitoring.log
     ```
 - All the client machines are accessible through SSH on localhost port 5001 and 5002, and the monitoring server on port 5000 (all default user=root password=screencast). You can change the ports by editing docker-compose.yml if you need to. Do SSH commands to test the attempt count
     ```
